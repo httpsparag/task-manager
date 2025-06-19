@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: laravel-backend
+    env: docker
+    repo: https://github.com/httpsparag/task-manager
+    dockerfilePath: Dockerfile
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: base64:/MS1jQTfIGXitDEU3x/BwADq3E7zAs4kyBnq+awVpb0=
+      - key: DB_CONNECTION
+        value: sqlite
